@@ -73,6 +73,11 @@ module.exports = (env, argv) => {
                 patterns: [{ from: 'static/' }],
             }),
 
+            // Config for Pixijs inspector
+            new webpack.ProvidePlugin({
+                PIXI: 'pixi.js'
+            }),
+
             // Make an index.html from the template
             new HtmlWebpackPlugin({
                 template: 'src/index.ejs',
